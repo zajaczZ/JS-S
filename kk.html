@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section >
+        <label > Szám: </label>
+        <input id="szam1" type="number">
+        
+        <label > Szám2: </label>
+        <input id="szam2" type="number">
+        
+        <button type="submit" id="gomb" onclick="nagyobb()">OK </button>
+        <p id="eredmeny"></p>
+    </section>
+
+    <section>
+        <label> SZÁM: </label>
+        <input id="szam3" type="number">
+
+        <button type="submit" id="uj" onclick="ujszam()">ÚJ SZÁM</button>
+        <button type="submit" id="max" onclick="biggest()">MAX</button>
+        <button type="submit" id="min" onclick="smallest()">MIN</button>
+
+        <p id="legnagyobb">   </p> <p id="legkisebb">   </p>
+
+    </section>
+
+    <script>
+        function nagyobb()
+        {
+        let szam1 = document.getElementById("szam1").value;
+        let szam2 = document.getElementById("szam2").value;
+        const eredmeny = document.getElementById("eredmeny");
+            if(szam1>szam2)
+            {
+                eredmeny.innerHTML ="Az első szám a nagyobb";
+            }
+            if(szam1<szam2)
+            {
+                eredmeny.innerHTML="A második szám a nagyobb";
+            }
+            if(szam1==szam2)
+            {
+                eredmeny.innerHTML="A két szám egyenlő"
+
+            }
+            
+        }
+        let lista=[]
+        function ujszam()
+        {
+            let szam3 = document.getElementById("szam3").value;
+            lista.push(szam3)
+            console.log(lista);
+
+        }
+        function biggest()
+         {
+            let szam4 = document.getElementById("szam3").value;
+            const legnagyobb = document.getElementById("legnagyobb");
+            legnagyobb.innerHTML=Math.max(...lista)+"legnagyobb";
+
+        
+
+
+        }
+        function smallest()
+        {
+            let szam5 = document.getElementById("szam3").value;
+            const legkisebb = document.getElementById("legkisebb");
+            legkisebb.innerHTML =Math.min(...lista)+"legkisebb";
+
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>
