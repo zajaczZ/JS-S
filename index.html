@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <section>
+            <h3>Fidesz</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusantium dolore ad cupiditate sed fugiat mollitia, maxime nesciunt molestias temporibus quo beatae magnam. Quasi, tempora ipsum excepturi inventore incidunt dolores.</p>
+        </section>
+        <section>
+            <h3>Orbán</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam animi nobis, modi eveniet ipsam voluptatum, at culpa libero, quas repudiandae? Obcaecati dolores rerum sunt assumenda, accusantium iure? Earum, quidem!</p>
+        </section>
+
+        <table>
+            <thead  >
+              <tr>
+                <th colspan="4">FIDESZ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>    
+                <td>Orbán Viktor</td>
+                <td>Deutsch Tamás</td>
+                <td>Németh Szilárd</td>
+                <td>Gulyás Gergely</td>
+              </tr>
+              <tr>    
+                <td>Áder János</td>
+                <td>Novák Katalin</td>
+                <td>Lázár János</td>
+                <td>Süli János</td>
+                <tr>    
+                    <td>Varga Mihály</td>
+                    <td>Balogh Zoltán</td>
+                    <td>Semjén Zsolt</td>
+                    <td>Bayer Zsolt</td>
+                  </tr>
+              </tr>
+              <tfoot>
+                <tr>
+                    <td colspan="4">HAJRÁ MAGYAROK!</td>
+                </tr>
+
+              </tfoot>
+            </tbody>
+          </table>
+          
+
+
+
+    <script>
+        $("h3").mouseover(function(params) {
+    $(params.target).css("color", "green");
+    });
+    $("h3").mouseleave(function(params) {
+    $(params.target).css("color", "orange");
+    });
+    
+
+    
+
+    $("table").mouseenter(function(params) {
+    $("th, tbody, tfoot").css("background-color", "orange");
+    });
+    $("table").mouseleave(function(params){
+        $("th").css("background-color","red");
+        $("tbody").css("background-color","white");
+        $("tfoot").css("background-color","green");
+    });
+            
+           
+
+
+            
+       
+    </script>
+    
+</body>
+</html>
